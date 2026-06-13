@@ -4,125 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Kanan's Retail Store</title>
     <link rel="icon" href="./src/media/icons/favicon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
-<body>
-    <header>
-        <span id="headline">Enjoy complimentary standard shipping on all orders.</span>
-        <div class="flexProperty">
-            <a id="websitesName" href="index.html">Book Store</a>
-            <div class="burger-menu">
-                <div></div>
-                <div></div>
-                <div></div>
+<body class="bg-slate-950 text-slate-100 antialiased">
+    <div class="min-h-screen">
+        <div class="bg-emerald-500 text-slate-950 text-center text-[0.72rem] font-semibold uppercase tracking-[0.35em] py-3">
+            Enjoy complimentary standard shipping on all orders.
+        </div>
+        <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95 backdrop-blur-xl">
+            <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
+                <a href="index.html" class="text-sm font-black uppercase tracking-[0.35em]">KANAN'S RETAIL STORE</a>
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a href="index.html" class="text-sm uppercase tracking-[0.2em] text-slate-200 transition hover:text-emerald-400">Home</a>
+                    <a href="pages/about.html" class="text-sm uppercase tracking-[0.2em] text-slate-200 transition hover:text-emerald-400">About</a>
+                </nav>
+                <div class="flex items-center gap-3">
+                    <button type="button" aria-label="Search" class="rounded-full border border-white/10 bg-white/5 p-3 text-slate-100 transition hover:bg-white/10">
+                        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7" /><line x1="16.65" y1="16.65" x2="21" y2="21" /></svg>
+                    </button>
+                    <a href="pages/shopping.html" aria-label="Cart" class="rounded-full border border-white/10 bg-white/5 p-3 text-slate-100 transition hover:bg-white/10">
+                        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-13z" /><circle cx="9" cy="21" r="1" /><circle cx="19" cy="21" r="1" /></svg>
+                    </a>
+                    <button type="button" aria-label="Profile" class="rounded-full border border-white/10 bg-white/5 p-3 text-slate-100 transition hover:bg-white/10">
+                        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                    </button>
+                </div>
             </div>
-            <nav id="navBar">
-                <ul>
-                    <li><a class="pageLinks navBarElements" href="index.html">Home</a></li>
-                    <li><a class="pageLinks navBarElements" href="about.html">About</a></li>
-                    <li><span id="pageAndIconsPipe" class="navBarElements">|</span></li>
-                    <li>
-                        <div class="search-container navBarElements"><img class="headerIcons"
-                                src="./src/media/icons/search.svg" alt="Search Icon" />
+        </header>
+
+        <main>
+            <section class="relative overflow-hidden px-6 pt-16 sm:pt-20 lg:px-8">
+                <div class="absolute inset-0">
+                    <img src="./src/media/pictures/pexels-kampus-production-7289725.jpg" alt="Modern workspace with reading materials" class="h-full w-full object-cover object-center opacity-90" />
+                    <div class="absolute inset-0 bg-slate-950/80"></div>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32">
+                    <div class="max-w-2xl">
+                        <p class="text-sm uppercase tracking-[0.45em] text-emerald-400">Bookstore essentials</p>
+                        <h1 class="mt-6 text-5xl font-black uppercase tracking-tight text-white sm:text-6xl">WELCOME!</h1>
+                        <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">Now taking online orders. Order today and get 20-40% off your first order. Hurry while supplies last!</p>
+                        <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                            <a href="pages/products.html" class="inline-flex w-full items-center justify-center rounded-3xl bg-emerald-500 px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-emerald-400 sm:w-auto">Shop Today</a>
+                            <a href="#featured" class="inline-flex w-full items-center justify-center rounded-3xl border border-white/10 px-8 py-4 text-sm uppercase tracking-[0.18em] text-white transition hover:border-emerald-400 sm:w-auto">Browse Featured</a>
                         </div>
-                    </li>
-                    <li><a class="navBarElements" href="cart.html"><img class="headerIcons"
-                                src="./src/media/icons/cart.svg" alt="Cart Icon" />
-                        </a>
-                    </li>
-                    <li>
-                        <div id="userDropdown" class="navBarElements"><img class="headerIcons"
-                                src="./src/media/icons/person.svg" alt="User Icon" />
+                    </div>
+                </div>
+            </section>
+
+            <section id="featured" class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+                <div class="flex flex-col items-center gap-4 text-center">
+                    <p class="text-sm uppercase tracking-[0.35em] text-emerald-400">Featured Products</p>
+                    <h2 class="text-3xl font-black uppercase tracking-tight text-white sm:text-4xl">Featured Products</h2>
+                </div>
+                <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+                    <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/90 p-6 shadow-[0_35px_80px_-40px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-emerald-500/40">
+                        <div class="flex items-center justify-between">
+                            <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-emerald-300">40% off</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Paperback</span>
                         </div>
-                    </li>
-                    <li><button id="darkModeToggle" class="navBarElements"><img id="bothModeIcons" class="headerIcons"
-                                src="./src/media/icons/sunny.svg" alt="Sun Icon" />
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+                        <img src="./src/media/pictures/products/books & reading/Atomic Habits/81wgcld4wxL.jpg" alt="Atomic Habits book cover" class="mt-6 h-72 w-full rounded-[1.5rem] object-cover shadow-2xl shadow-black/20" />
+                        <div class="mt-6 space-y-3 text-left">
+                            <h3 class="text-xl font-semibold text-white">Atomic Habits</h3>
+                            <p class="text-sm text-slate-400">by James Clear</p>
+                            <p class="text-base font-semibold text-white"><span class="mr-3 text-slate-500 line-through">$25.00</span>$15.00</p>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/90 p-6 shadow-[0_35px_80px_-40px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-emerald-500/40">
+                        <div class="flex items-center justify-between">
+                            <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-emerald-300">30% off</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Hardcover</span>
+                        </div>
+                        <img src="./src/media/pictures/products/books & reading/The Body Keeps the Score/61NdJMwAThS.jpg" alt="The Body Keeps the Score book cover" class="mt-6 h-72 w-full rounded-[1.5rem] object-cover shadow-2xl shadow-black/20" />
+                        <div class="mt-6 space-y-3 text-left">
+                            <h3 class="text-xl font-semibold text-white">The Body Keeps the Score</h3>
+                            <p class="text-sm text-slate-400">by Bessel van der Kolk</p>
+                            <p class="text-base font-semibold text-white"><span class="mr-3 text-slate-500 line-through">$32.00</span>$22.40</p>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/90 p-6 shadow-[0_35px_80px_-40px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-emerald-500/40">
+                        <div class="flex items-center justify-between">
+                            <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-emerald-300">35% off</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Paperback</span>
+                        </div>
+                        <img src="./src/media/pictures/products/books & reading/How Are You Really/71x7JbVEYDL.jpg" alt="How Are You Really book cover" class="mt-6 h-72 w-full rounded-[1.5rem] object-cover shadow-2xl shadow-black/20" />
+                        <div class="mt-6 space-y-3 text-left">
+                            <h3 class="text-xl font-semibold text-white">How Are You Really</h3>
+                            <p class="text-sm text-slate-400">by Jamie Tworkowski</p>
+                            <p class="text-base font-semibold text-white"><span class="mr-3 text-slate-500 line-through">$28.00</span>$18.20</p>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/90 p-6 shadow-[0_35px_80px_-40px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-emerald-500/40">
+                        <div class="flex items-center justify-between">
+                            <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-emerald-300">25% off</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-slate-500">Paperback</span>
+                        </div>
+                        <img src="./src/media/pictures/products/books & reading/Anatomy & Physiology For Dummies/81knlKRBBvL.jpg" alt="Anatomy & Physiology For Dummies book cover" class="mt-6 h-72 w-full rounded-[1.5rem] object-cover shadow-2xl shadow-black/20" />
+                        <div class="mt-6 space-y-3 text-left">
+                            <h3 class="text-xl font-semibold text-white">Anatomy & Physiology For Dummies</h3>
+                            <p class="text-sm text-slate-400">by Maggie Norris</p>
+                            <p class="text-base font-semibold text-white"><span class="mr-3 text-slate-500 line-through">$30.00</span>$22.50</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="mt-10 text-center">
+                    <a href="pages/products.html" class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-200 transition hover:text-emerald-400">
+                        View All Products
+                        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></svg>
+                    </a>
+                </div>
+            </section>
+
+            <section class="mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+                <div class="rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-[0_35px_80px_-30px_rgba(0,0,0,0.8)]">
+                    <button id="contactToggle" type="button" class="w-full rounded-[1.75rem] bg-emerald-500 px-6 py-4 text-left text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-xl shadow-emerald-500/30 transition hover:bg-emerald-400">Drop us a line!</button>
+                    <div id="contactPanel" class="mt-6 hidden rounded-[1.75rem] border border-white/10 bg-slate-950/95 p-6">
+                        <form id="contactForm" class="space-y-5">
+                            <div>
+                                <label class="sr-only" for="contactName">Name</label>
+                                <input id="contactName" type="text" placeholder="Name" class="w-full rounded-2xl border border-white/10 bg-[#0f1115] px-5 py-4 text-white placeholder:text-slate-500 focus:border-emerald-400 focus:outline-none" />
+                            </div>
+                            <div>
+                                <label class="sr-only" for="contactEmail">Email</label>
+                                <input id="contactEmail" type="email" required placeholder="Email" class="w-full rounded-2xl border border-white/10 bg-[#0f1115] px-5 py-4 text-white placeholder:text-slate-500 focus:border-emerald-400 focus:outline-none" />
+                            </div>
+                            <div>
+                                <label class="sr-only" for="contactMessage">Message</label>
+                                <textarea id="contactMessage" rows="4" placeholder="Message" class="w-full rounded-2xl border border-white/10 bg-[#0f1115] px-5 py-4 text-white placeholder:text-slate-500 focus:border-emerald-400 focus:outline-none"></textarea>
+                            </div>
+                            <div class="flex flex-col gap-3 sm:flex-row sm:justify-between">
+                                <button type="submit" class="inline-flex items-center justify-center rounded-2xl bg-emerald-500 px-6 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-emerald-400">Send</button>
+                                <button id="contactCancel" type="button" class="inline-flex items-center justify-center rounded-2xl border border-white/10 px-6 py-4 text-sm uppercase tracking-[0.18em] text-slate-200 transition hover:border-emerald-400">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
+            <div class="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-center shadow-[0_30px_90px_-30px_rgba(0,0,0,0.85)]">
+                <h3 class="text-lg font-semibold uppercase tracking-[0.18em] text-white">Join Our Mailing List</h3>
+                <p class="mt-4 max-w-2xl mx-auto text-sm leading-6 text-slate-400">Get the latest arrivals, exclusive offers, and limited-time discounts in your inbox.</p>
+                <form class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+                    <label class="sr-only" for="mailingEmail">Email</label>
+                    <input id="mailingEmail" name="email" type="email" required placeholder="Enter your email" class="min-w-0 flex-1 rounded-2xl border border-white/10 bg-[#0f1115] px-5 py-4 text-white placeholder:text-slate-500 focus:border-emerald-400 focus:outline-none" />
+                    <button type="submit" class="rounded-2xl bg-emerald-500 px-6 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-emerald-400">Sign Up</button>
+                </form>
+            </div>
+        </footer>
+
+        <div class="fixed right-6 bottom-6 z-50 flex flex-col items-end gap-3">
+            <button id="chatToggle" type="button" class="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500 text-slate-950 shadow-2xl shadow-emerald-500/30 transition hover:scale-105" aria-label="Open chat">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+            </button>
+            <div id="chatPopup" class="hidden w-[320px] max-w-full rounded-[2rem] border border-white/10 bg-slate-950/95 p-5 shadow-2xl shadow-black/40">
+                <div class="flex items-start justify-between gap-3">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.35em] text-emerald-400">Live support</p>
+                        <h3 class="mt-2 text-lg font-semibold text-white">Need help?</h3>
+                    </div>
+                    <button id="chatClose" type="button" class="text-slate-400 transition hover:text-white" aria-label="Close chat">×</button>
+                </div>
+                <div class="mt-5 space-y-4">
+                    <p class="text-sm leading-6 text-slate-400">Ask about recommendations, shipping, or order status.</p>
+                    <form id="chatForm" class="space-y-4">
+                        <div>
+                            <label class="sr-only" for="chatName">Name</label>
+                            <input id="chatName" type="text" placeholder="Name" class="w-full rounded-2xl border border-white/10 bg-[#0f1115] px-4 py-3 text-white placeholder:text-slate-500 focus:border-emerald-400 focus:outline-none" />
+                        </div>
+                        <div>
+                            <label class="sr-only" for="chatEmail">Email</label>
+                            <input id="chatEmail" type="email" placeholder="Email" class="w-full rounded-2xl border border-white/10 bg-[#0f1115] px-4 py-3 text-white placeholder:text-slate-500 focus:border-emerald-400 focus:outline-none" />
+                        </div>
+                        <div>
+                            <label class="sr-only" for="chatMessage">Message</label>
+                            <textarea id="chatMessage" rows="3" placeholder="Message" class="w-full rounded-2xl border border-white/10 bg-[#0f1115] px-4 py-3 text-white placeholder:text-slate-500 focus:border-emerald-400 focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full rounded-2xl bg-emerald-500 px-4 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-emerald-400">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </header>
-    <main>
-        <section id="BannerPart">
-            <div class="videoCarousel swiper-container">
-                <div class="swiper-wrapper">
-                    <video class="video-slide swiper-slide" src="./src/media/videos/4865902-hd_1366_720_25fps.mp4" autoplay muted loop></video>
-                    <video class="video-slide swiper-slide" src="./src/media/videos/4861111-hd_1366_720_25fps.mp4" autoplay muted loop></video>
-                    <video class="video-slide swiper-slide" src="./src/media/videos/4861118-hd_1366_720_25fps.mp4" autoplay muted loop></video>
-                </div>
-            </div>              
-            <div id="ontoCarousel">
-                <span></span>
-                <h1 class="ontoCarouselsBox">Welcome!</h1>
-                <p class="ontoCarouselsBox">Now taking online orders.</p>
-                <p class="ontoCarouselsBox">Order today and get 20-40% off your first order.</p>
-                <button class="ontoCarouselsBox someButtonsStyles">Shop Now</button>
-            </div>
-        </section>
-        <section class="ProductsContainer swiper-container">
-            <h1>Featured Products</h1>
-            <div class="swiper-button-prev BothSwiperArrows">
-                <i class="fa-solid fa-arrow-left"></i>
-            </div>
-            <div class="swiper-button-next BothSwiperArrows">
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div class="productsSlides swiper-wrapper">
-                <div class="productsSlide swiper-slide">
-                    <img src="./src/media/pictures/products/books & reading/Anatomy & Physiology For Dummies/81knlKRBBvL.jpg" alt="Product 1">
-                    <h3>Product 1 Title</h3>
-                    <p>Product 1 Description</p>
-                    <p class="productsPrice"><span>$30.00</span>$20.00</p>
-                </div>
-                <div class="productsSlide swiper-slide">
-                    <img src="./src/media/pictures/products/books & reading/Atomic Habits/81wgcld4wxL.jpg" alt="Product 2">
-                    <h3>Product 2 Title</h3>
-                    <p>Product 2 Description</p>
-                    <p class="productsPrice"><span>$30.00</span>$20.00</p>
-                </div>
-                <div class="productsSlide swiper-slide">
-                    <img src="./src/media/pictures/products/books & reading/How Are You Really/71x7JbVEYDL.jpg" alt="Product 3">
-                    <h3>Product 3 Title</h3>
-                    <p>Product 3 Description</p>
-                    <p class="productsPrice"><span>$30.00</span>$20.00</p>
-                </div>
-                <div class="productsSlide swiper-slide">
-                    <img src="./src/media/pictures/products/books & reading/The Body Keeps the Score/61NdJMwAThS.jpg" alt="Product 4">
-                    <h3>Product 4 Title</h3>
-                    <p>Product 4 Description</p>
-                    <p class="productsPrice"><span>$30.00</span>$20.00</p>
-                </div>
-            </div>
-            <a id="allProductsLink" href="products.html">View All Products ></a>
-        </section>
-    </main>
-    <footer>
-        <div id="footerTop">
-            <h1>Questions or Concerns?</h1>
-            <p>Need help selecting a product or finding a sustainable option? Send us a message!</p>
-            <button type="button" id="dropLine" class="someButtonsStyles">Drop us a line!</button>
-        </div>
-        <form class="contactSubmitForm">
-            <input name="name" type="text" class="feedback-input" placeholder="Name" />
-            <input name="email" type="text" class="feedback-input" placeholder="Email" />
-            <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-            <input type="submit" value="SUBMIT" />
-        </form>
-        <div id="mailingList">
-            <h1>Join Our Mailing List</h1>
-            <div id="mailingListInputWithButton">
-                <input id="mailingListInput" type="text" placeholder="Email">
-                <button type="submit" id="mailingListButton" class="someButtonsStyles">Sign Up</button>
-            </div>
-        </div>
-        <div id="copyright"></div>
-    </footer>
+    </div>
+
     <script src="./src/js/script.js"></script>
 </body>
 
